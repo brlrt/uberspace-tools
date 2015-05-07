@@ -2,6 +2,7 @@
 if [ -z "$1" ]; then
 	echo "No Domain specified"
 	echo "Usage: uber-del-subdomain <domain.tld>"
+    uberspace-del-domain -h
 else
 	uberspace-del-domain -w -d $1
 	echo "DELETE Webserver Folder @ /var/www/virtual/$USER/$1"

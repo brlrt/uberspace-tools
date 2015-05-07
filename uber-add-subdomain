@@ -1,14 +1,9 @@
 #!/bin/bash
 # Uberspace Adding Subdomains and non-Wildcard Domains
-
-# [DEPEND]
-# "uberspace-add-domain"
-# [/DEPEND]
-
-
 if [ -z "$1" ]; then
 	echo "No Domain specified"
 	echo "Usage: uber-add-subdomain <domain.tld>"
+    uberspace-add-domain -h
 else
 	uberspace-add-domain -w -d $1
 	echo "CREATE Webserver Folder @ /var/www/virtual/$USER/$1"
