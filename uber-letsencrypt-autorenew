@@ -1,5 +1,5 @@
 #!/bin/bash
 letsencrypt-renewer --config-dir ~/.config/letsencrypt --logs-dir ~/.config/letsencrypt/logs --work-dir ~/tmp/
-for NAME in $(ls ~/.config/letsencrypt/live/) do
-  uberspace-prepare-certificate -k ~/.config/letsencrypt/live/$NAME/privkey.pem -c ~/.config/letsencrypt/$NAME/cert.pem
+for NAME in $(ls ~/.config/letsencrypt/live/); do
+  uberspace-prepare-certificate -k ~/.config/letsencrypt/live/$NAME/privkey.pem -c ~/.config/letsencrypt/live/$NAME/cert.pem
 done
